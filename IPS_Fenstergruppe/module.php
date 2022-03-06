@@ -37,7 +37,7 @@
         }
 
         public function MessageSink($TimeStamp, $SenderID, $Message, $Data) {
-            $this->UpdateWindowState();
+            $this->UpdateWindowGroupState();
         }
 
         /**
