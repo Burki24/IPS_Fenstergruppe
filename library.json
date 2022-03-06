@@ -1,0 +1,12 @@
+{
+  "id": "{0B9A27FB-19EA-F6AB-424F-5D7915D33A76}",
+  "name": "WindowGroupState",
+  "author": "Burki24",
+  "url": "https://github.com/Burki24/IPS_Fenstergruppe",
+  "compatibility": {
+      "version": "5.5"
+  },
+  "version": "1.0",
+  "build": 1,
+  "date": 5
+}
