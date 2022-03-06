@@ -54,16 +54,16 @@
             $Reed4 = GetValue($this->ReadPropertyInteger("Reed4ID"));
             $WindowOpenMode = $this->ReadPropertyInteger("WindowOpenMode");
             
-            $this->SendDebug("WindowGroup", "WindowOpenMode: " . $WindowOpenMode, 0);
-            $this->SendDebug("WindowGroup", "Reed 1: " . (int)$Reed1, 0);
-            $this->SendDebug("WindowGroup", "Reed 2: " . (int)$Reed2, 0);
-            $this->SendDebug("WindowGroup", "Reed 3: " . (int)$Reed3, 0);
-            $this->SendDebug("WindowGroup", "Reed 4: " . (int)$Reed3, 0);
+            $this->SendDebug("WindowGroupState", "WindowOpenMode: " . $WindowOpenMode, 0);
+            $this->SendDebug("WindowGroupState", "Reed 1: " . (int)$Reed1, 0);
+            $this->SendDebug("WindowGroupState", "Reed 2: " . (int)$Reed2, 0);
+            $this->SendDebug("WindowGroupState", "Reed 3: " . (int)$Reed3, 0);
+            $this->SendDebug("WindowGroupState", "Reed 4: " . (int)$Reed3, 0);
             $WindowGroup = 0;
             if (($Reed1 != 1) || ($Reed2 != 1) || ($Reed3 != 1) || ($Reed4 != 1)){
                 $WindowGroup = 1;
             }
-            SetValue($this->GetIDForIdent("WindowGroupState"), $WindowGroup);
+            SetValue($this->GetIDForIdent("WindowGroup"), $WindowGroup);
             $this->SendDebug("WindowGroupState", "Window Group: " . (int)$WindowGroup, 0);
         }
     }
