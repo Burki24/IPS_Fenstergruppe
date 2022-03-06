@@ -37,7 +37,7 @@
         }
 
         public function MessageSink($TimeStamp, $SenderID, $Message, $Data) {
-            $this->UpdateWindowGroup();
+            $this->UpdateWindowGroupState();
         }
 
         /**
@@ -47,7 +47,7 @@
         * ABC_MeineErsteEigeneFunktion($id);
         *
         */
-        private function UpdateWindowGroup() {
+        private function UpdateWindowGroupState() {
             $Reed1 = GetValue($this->ReadPropertyInteger("Reed1ID"));
             $Reed2 = GetValue($this->ReadPropertyInteger("Reed2ID"));
             $Reed3 = GetValue($this->ReadPropertyInteger("Reed3ID"));
@@ -63,7 +63,7 @@
             if (($Reed1 != 1) || ($Reed2 != 1) || ($Reed3 != 1) || ($Reed4 != 1)){
                 $WindowGroup = 1;
             }
-            SetValue($this->GetIDForIdent("WindowGroup"), $WindowGroup);
-            $this->SendDebug("WindowGroup", "Window Group: " . (int)$WindowGroup, 0);
+            SetValue($this->GetIDForIdent("WindowGroupState"), $WindowGroup);
+            $this->SendDebug("WindowGroupState", "Window Group: " . (int)$WindowGroup, 0);
         }
     }
